@@ -10,7 +10,9 @@
     
     ## MAIN SCRIPT ###
     ## Grab the passed in values
-    $sensor_id
+    $sensor_id = $_POST["sid"];
+    $sensor_h  = $_POST["shum"];
+    $sensor_t  = $_POST["stmp"];
     
     ## Connect to the database
     try{
@@ -18,4 +20,16 @@
     }catch(PDOException $e){
       ## Add code to do something with exception here
     }
+
+   ## Insert the data into the sensor_data table
+   $sqlClause = $dbo->prepare("INSERT INTO sensor_data() VALUES(:sensor_id,:sensor_humidity,:sensor_values)");
+   $sqlClause->bindParam(':sensor_id',$sensor_id,PDO::PARAM_INT);
+   $sqlClause->bindParam(':sensor_humidity',$sensor_h,PDO::PARAM_STR);
+   $sqlClause->bindParam(':sensor_values',$sensor_t,PDO::PARAM_STR);
+   $sqlClause->execute();
+
+   ## Free up the resources used
+   unset($sqlClause);
+   unset($dbo);
+
 ?>
