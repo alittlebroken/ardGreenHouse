@@ -35,7 +35,7 @@ An automated greenhouse controlled by Arduino
 - Hot glue gun
 
 ## Notes
-### GikGun Capacitive Soil Moisture Sensor v1.2
+### GikFun Capacitive Soil Moisture Sensor v1.2
 - Unable to as of yet find any data on sensor on GikFun website or the web for values that match what the sensor gives me
 - Get really spaced out sensor readings, seems to overlap a lot
 - Sensor takes a while to update its values tomreflect it state ( I.E. going from glass to open air )
@@ -47,3 +47,11 @@ An automated greenhouse controlled by Arduino
 - Sensor reading in glass of water: >300 and sat between 400 and >500 for a minute
 - Sensor reading after being taking out of glass of water: >150 and <340
 - Sensor reading held in palm of hand: <10
+
+#### Sensor Readings #2
+- Again connected to A0
+- In water ( Rested on glass edge to keep still ): 311
+- Out of water ( Rested on top of glass ): > 570 to ( 602 is highest seen so far )
+
+- Note: When sensor was removed and put back in the water the readings went down to zero
+- Note: Set v+ of sensor to 3.3v, took it out of the water ( so just air ), dried it off and hit reset. Now get a value between zero and 100. Placed in water again and got values of 300 to 400. WTF????
