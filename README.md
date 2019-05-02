@@ -55,3 +55,9 @@ An automated greenhouse controlled by Arduino
 
 - Note: When sensor was removed and put back in the water the readings went down to zero
 - Note: Set v+ of sensor to 3.3v, took it out of the water ( so just air ), dried it off and hit reset. Now get a value between zero and 100. Placed in water again and got values of 300 to 400. WTF????
+
+#### Sensor Readings #3
+- Again connected to A0
+- Powered by 5v pin instead of 3.3v
+- Dry:  577 to 615
+- Wet:  320
