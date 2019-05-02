@@ -59,5 +59,5 @@ An automated greenhouse controlled by Arduino
 #### Sensor Readings #3
 - Again connected to A0
 - Powered by 5v pin instead of 3.3v
-- Dry:  577 to 615
+- Dry:  542 to 615
 - Wet:  320
