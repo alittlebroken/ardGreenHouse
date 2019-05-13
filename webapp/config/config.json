@@ -1,0 +1,11 @@
+{
+    "log":{
+        "logFileName":"application.log"
+    },
+    "db":{
+        "hostName":"localhost",
+        "dbName":"ardGreenHouse",
+        "userName":"ardGreenhouse",
+        "userPassword":"ardGreenhouse"
+    }
+}
