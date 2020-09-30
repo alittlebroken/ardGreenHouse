@@ -10,35 +10,36 @@
 
 // Defines
 
+// Objects
+// Create a new instances of the timer class
+Timer minuteTimer(60000);
+Timer fiveMinuteTimer(300000);
+
 // Variables/Properties
 
 // Methods
 
 // PROGRAM START
 void setup(){
-
-  // Create a new instances of the timer class
-  Timer minuteTimer(60000)
-  Timer fiveMinuteTmer(300000)
   
 }
 
 
 void loop(){
 
-  // Update an timers
+  // Update all timers
   minuteTimer.Update();
   fiveMinuteTimer.Update();
   
   // Check if any of the timers have triggered
   if(minuteTimer.timerTriggered)
   {
-      serial.println("Minute timer has triggered")
+      Serial.println("Minute timer has triggered");
   }
   
   if(fiveMinuteTimer.timerTriggered)
   {
-      serial.println("5 minute timer has triggered")
+      Serial.println("5 minute timer has triggered");
   }
   
 }
