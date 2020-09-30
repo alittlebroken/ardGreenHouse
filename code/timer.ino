@@ -30,5 +30,16 @@ void loop(){
   minuteTimer.Update();
   fiveMinuteTimer.Update();
   
+  // Check if any of the timers have triggered
+  if(minuteTimer.timerTriggered)
+  {
+      serial.println("Minute timer has triggered")
+  }
+  
+  if(fiveMinuteTimer.timerTriggered)
+  {
+      serial.println("5 minute timer has triggered")
+  }
+  
 }
 // PROGRAM END
