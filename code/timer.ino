@@ -1,30 +1,34 @@
-// ------ LIBRARIES
+/*
+*   timer.ino
+*   Test out my new simple timer class
+*   Paul Lockyer (plockyer@googlemail.com)
+*   2020-09-30
+*/
 
-// ------ CONSTANTS
+// Includes
+#include "Timer.h"
 
-const int pumpPin = 10;     // Pin for the relay controlling the water pump
+// Defines
 
-const int pumpDelay = 5000; // How often in millsecs ( 1000 =  1 second ) to check or change the state of the pump
+// Variables/Properties
 
-// ------ VARIABLES
+// Methods
 
-bool pumpState = LOW;   // Controls state of the pump ( LOW for ON, HIGH for OFF )
+// PROGRAM START
+void setup(){
 
-unsigned long currentMillis = 0;     // Stores current millis each run of the loop
-                                            // Compare that for each item you wish to update
-
-unsigned long prevPumpMillis = 0;               // Last time the pump state was updated
-
-function loop{
-
-    currentMillis = millis();       /// Get the current time in millisecs since the program started
-    
-    
-
+  // Create a new instances of the timer class
+  Timer minuteTimer(60000)
+  Timer fiveMinuteTmer(300000)
+  
 }
 
-function updatePumPState{
 
-    // If the pump is OFF (LOW) then check to see if the specified interval has passed 
+void loop(){
 
+  // Update an timers
+  minuteTimer.Update();
+  fiveMinuteTimer.Update();
+  
 }
+// PROGRAM END
